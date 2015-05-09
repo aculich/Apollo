@@ -31,6 +31,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     "zookeeper_servers:children" => ["mesos_masters"],
     "consul_servers:children"    => ["mesos_masters"],
     "weave_servers:children"     => ["mesos_slaves", "load_balancers"],
+    "marathon_servers:children"  => ["mesos_masters"],
   }
 
   # Mesos master nodes
